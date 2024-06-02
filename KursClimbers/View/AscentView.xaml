@@ -1,0 +1,29 @@
+﻿<Window x:Class="KursClimbers.View.AscentView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:KursClimbers.ViewModel"
+        mc:Ignorable="d"
+        Title="Ascents" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:AscentViewModel />
+    </Window.DataContext>
+    <Grid>
+        <DataGrid ItemsSource="{Binding Ascents}" SelectedItem="{Binding SelectedAscent}" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="End Date" Binding="{Binding EndDate}" />
+                <DataGridTextColumn Header="Group Id" Binding="{Binding GroupId}" />
+                <DataGridTextColumn Header="Mountain Id" Binding="{Binding MountainId}" />
+                <DataGridTextColumn Header="Start Date" Binding="{Binding StartDate}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+            <Button Content="Add" Command="{Binding AddAscentCommand}" Width="75" Margin="5" />
+            <Button Content="Update" Command="{Binding UpdateAscentCommand}" Width="75" Margin="5" />
+            <Button Content="Delete" Command="{Binding DeleteAscentCommand}" Width="75" Margin="5" />
+        </StackPanel>
+    </Grid>
+</Window>

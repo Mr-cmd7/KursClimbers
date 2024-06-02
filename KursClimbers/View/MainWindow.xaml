@@ -1,0 +1,28 @@
+﻿<Window x:Class="KursClimbers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Exit" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Tables">
+                <MenuItem Header="_Ascents" Click="ShowAscentView"/>
+                <MenuItem Header="_Climbers" Click="ShowClimberView"/>
+                <MenuItem Header="_Groups" Click="ShowGroupView"/>
+                <MenuItem Header="_Mountains" Click="ShowMountainView"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Open Ascents" Click="ShowAscentView"/>
+            <Button Content="Open Climbers" Click="ShowClimberView"/>
+            <Button Content="Open Groups" Click="ShowGroupView"/>
+            <Button Content="Open Mountains" Click="ShowMountainView"/>
+        </StackPanel>
+    </Grid>
+</Window>

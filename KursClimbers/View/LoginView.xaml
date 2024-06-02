@@ -1,0 +1,18 @@
+﻿<Window x:Class="KursClimbers.View.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursClimbers.View"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Регистрация" Height="300" Width="400">
+    <Canvas>
+        <Label Content="Логин" Canvas.Left="84" Canvas.Top="46" HorizontalAlignment="Center" VerticalAlignment="Top" Width="103"/>
+        <TextBox x:Name="LoginBox" Canvas.Left="84" TextWrapping="Wrap" Canvas.Top="72" Width="234" RenderTransformOrigin="0.38,3.099" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Пароль" Canvas.Left="84" Canvas.Top="102" HorizontalAlignment="Left" VerticalAlignment="Center" Width="61"/>
+        <PasswordBox x:Name="PasswordBox" Canvas.Left="84" Canvas.Top="128" Width="234" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button Content="Вход" Canvas.Left="84" Canvas.Top="185" HorizontalAlignment="Left" VerticalAlignment="Center" Width="114" Command="{Binding LoginCommand}"/>
+        <Button Content="Регистрация" Canvas.Left="207" Canvas.Top="185" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding RegisterCommand}" Width="111"/>
+    </Canvas>
+</Window>
